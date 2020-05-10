@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ECommerce.Models.ProductsViewModel>
+
+@{
+    ViewBag.Title = "GetProductBySupplier";
+}
+
+
+
+@foreach (var item in Model)
+        {
+<h3>@item.ProductName</h3>
+    <table class="table table-bordered table-hover" >
+        <tr>
+            <th>Customer Name</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total Price</th>
+        </tr>
+        @foreach (var subitem in item.Items)
+        {
+    <tr>
+        <td>@subitem.Customer.CustomerName</td>
+        <td>@subitem.Quantity</td>
+        <td>@subitem.UnitPrice</td>
+
+        <td>@subitem.TotalPrice</td>
+    </tr>
+
+        }
+
+    </table>
+
+
+}
+

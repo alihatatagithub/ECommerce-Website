@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ECommerce.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+    @using (Ajax.BeginForm(new AjaxOptions() { HttpMethod = "POST", Url = Url.Action("Search", "Home"), InsertionMode = InsertionMode.ReplaceWith, UpdateTargetId = "ajax" }))
+    {
+    <div class="container">
+        <div class="row">
+            <input type="text" name="SearchName" id="SearchName" />
+            <input type="submit" value="Search" class="btn btn-outline-success" />
+        </div>
+    </div>
+    }
+
+
+<div id="ajax">
+    <div class="jumbotron alert alert-info">
+        <h3>Welcome To You in our Website</h3>
+        <p>This Website Help You In Shopping </p>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h1>@Html.DisplayFor(modelItem => item.CategoryName)</h1></div>
+
+            <div class="row panel-body">
+
+                @foreach (var subItem in item.Products)
+                {
+                    <div class="col-md-3 thumbnail" style="margin-left:20px; margin-bottom:30px; min-height:380px;">
+                        <img src="~/Uploads/@subItem.ProductImage" />
+                        <h3>@Html.DisplayFor(modelItem => subItem.ProductName)</h3>
+                        @Html.ActionLink("Details", "Details", new { id = subItem.ProductID }, new { @class = "btn btn-danger" })
+
+
+                    </div>
+                }
+            </div>
+        </div>
+
+    }
+
+</div>
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+}

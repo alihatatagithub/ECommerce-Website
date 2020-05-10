@@ -1,0 +1,46 @@
+﻿@model ECommerce.Models.OrderDetail
+
+@{
+    ViewBag.Title = "DetailsOfProduct";
+}
+
+<h2>DetailsOfProduct</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><h1>@Html.DisplayFor(modelItem => modelItem.Product.ProductName)</h1></div>
+
+    <div class="row panel-body">
+
+
+        <div class="col-md-3 thumbnail" style="margin-left:20px; margin-bottom:30px; min-height:380px; min-width:1100px">
+            <img src="~/Uploads/@Model.Product.ProductImage" />
+
+            <div style="text-align:center">
+                <h3> Price: @Html.DisplayFor(modelItem => modelItem.UnitPrice)</h3>
+                <h3>Date Of Shopping: @Html.DisplayFor(modelItem => modelItem.ShoppingDate)</h3>
+                <h3>Quantity: @Html.DisplayFor(modelItem => modelItem.Quantity)</h3>
+
+                <h3>Price: @Html.DisplayFor(modelItem => modelItem.TotalPrice)</h3>
+
+                <a class="btn btn-warning" href="@Url.Action("Index","Home")">Back To List</a>
+
+
+                <div id="div1">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

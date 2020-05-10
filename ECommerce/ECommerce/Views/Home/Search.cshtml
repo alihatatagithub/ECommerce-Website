@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<ECommerce.Models.Product>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+<div class="panel panel-info">
+    <div class="panel-heading"><h1>Result Search</h1></div>
+
+    <div class="row panel-body">
+
+        @foreach (var subItem in Model)
+        {
+            <div class="col-md-3 thumbnail" style="margin-left:20px; margin-bottom:30px; min-height:380px;">
+                <img src="~/Uploads/@subItem.ProductImage" />
+                <h3>@Html.DisplayFor(modelItem => subItem.ProductName)</h3>
+                @Html.ActionLink("Details", "Details", new { id = subItem.ProductID }, new { @class = "btn btn-danger" })
+            </div>
+        }
+    </div>
+</div>

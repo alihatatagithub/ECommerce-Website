@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ECommerce.Models.OrderDetail>
+
+@{
+    ViewBag.Title = "GetProductByCustomer";
+}
+
+
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShoppingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShoppingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalPrice)
+
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditOfProduct", new { id=item.OrderDetialsID }) |
+            @Html.ActionLink("Details", "DetailsOfProduct", new { id=item.OrderDetialsID }) |
+            @Html.ActionLink("Delete", "DeleteOfProduct", new { id=item.OrderDetialsID })
+        </td>
+    </tr>
+}
+
+</table>
