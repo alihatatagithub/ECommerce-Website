@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+    <link href="~/Areas/AdminContent/AdminStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active"> Sign In </h2>
+
+
+            <!-- Login Form -->
+            @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+        <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+
+
+        </div>
+    </div>
+</body>
+</html>

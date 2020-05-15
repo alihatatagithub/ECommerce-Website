@@ -167,6 +167,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\DashBoard\Controllers\AdminController.cs" />
+    <Compile Include="Areas\DashBoard\DashBoardAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -209,6 +211,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\AdminContent\AdminStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -235,6 +238,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Html.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\webfonts\fa-brands-400.eot" />
@@ -249,6 +253,12 @@
     <Content Include="Content\fonts\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\fonts\webfonts\fa-solid-900.woff" />
     <Content Include="Content\fonts\webfonts\fa-solid-900.woff2" />
+    <Content Include="Areas\DashBoard\Views\web.config" />
+    <Content Include="Areas\DashBoard\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\DashBoard\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\DashBoard\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\DashBoard\Views\Admin\Login.cshtml" />
+    <Content Include="Areas\DashBoard\Views\Admin\Contact.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -319,6 +329,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\DashBoard\Models\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>

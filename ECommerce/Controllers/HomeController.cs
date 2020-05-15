@@ -171,11 +171,12 @@ namespace ECommerce.Controllers
         [HttpPost]
         public ActionResult Search(string searchName)
         {
-            var result = db.Products.Where(a => a.ProductName.Contains(searchName)
-            || a.Supplier.CompanyName.Contains(searchName)
-            || a.Category.CategoryName.Contains(searchName));
 
-            return View(result);
+                var result = db.Products.Where(a => a.ProductName.Contains(searchName)
+                || a.Supplier.CompanyName.Contains(searchName)
+                || a.Category.CategoryName.Contains(searchName));
+                return View(result);
+
         }
         [AllowAnonymous]
         public ActionResult About()

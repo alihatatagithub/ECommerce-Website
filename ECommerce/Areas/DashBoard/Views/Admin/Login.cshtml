@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <link href="~/Areas/AdminContent/AdminStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    @model ECommerce.Models.LoginViewModel
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active"> Sign In </h2>
+
+
+            <!-- Login Form -->
+            @using (Html.BeginForm("Login", "Admin", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <form>
+                    <input type="text" id="UserName" class="fadeIn second" name="UserName" placeholder="UserName">
+                    <input type="password" id="Password" class="fadeIn third" name="Password" placeholder="password">
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                </form>
+
+            }
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>
