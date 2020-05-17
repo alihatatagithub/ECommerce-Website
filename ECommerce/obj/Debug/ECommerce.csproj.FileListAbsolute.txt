@@ -267,3 +267,9 @@ C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website
 C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\obj\Debug\ECommerce.csproj.CopyComplete
 C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\obj\Debug\ECommerce.dll
 C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\obj\Debug\ECommerce.pdb
+C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\Ali\Desktop\New folder\FreeLance\First Project\GitHub\ECommerce-Website\ECommerce\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
